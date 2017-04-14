@@ -1,0 +1,87 @@
+* {
+    transition : height 0.30s;
+    -webkit-transition : height 0.30s;
+    margin : 0px;
+    padding : 0px;
+}
+
+body {
+    padding : auto;
+    text-align : center;
+}
+
+#pageBody {
+    background-color : lightgrey;
+    display : inline-block;
+    width : 900px;
+}
+
+div.dropDownContainer {
+    position : relative;
+    height : 40px;
+    width : 200px;
+    background-color : lightgreen;
+    display : inline-block;
+}
+
+div.dropDownContainer div {
+    position : absolute;
+    width : 200px;
+    height : 40px;
+    line-height : 40px;
+    background-color : lightgreen;
+}
+
+div.dropDownContainer ul {
+    overflow-y : visible;
+    top : 40px;
+    position : absolute;
+    height : 0px;
+    width : 200px;
+    list-style : none;
+}
+
+div.dropDownContainer ul li {
+    overflow-y : hidden;
+    height : 0px;
+    width : 200px;
+    background-color : lightgreen;
+}
+
+div.dropDownContainer:hover ul li {
+    height : 40px;
+    line-height : 40px;
+}
+
+div.dropDownContainer ul li:hover {
+    background-color : lightyellow;
+}
+
+*.left {
+    float : left;
+    text-align : left;
+}
+
+*.left li, *.left div {
+    text-align : left;
+    padding-left : 10px;
+}
+
+*.right {
+    float : right;
+    text-align : right;
+}
+
+*.right li, *.right div {
+    text-align : right;
+    padding-right : 10px;
+}
+
+*.center {
+    float : center;
+    text-align : center;
+}
+
+*.center li, *.center div {
+    text-align : center;
+}
