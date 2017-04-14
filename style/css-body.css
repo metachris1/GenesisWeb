@@ -6,14 +6,28 @@
 }
 
 body {
+    background-color : darkgrey;
     padding : auto;
     text-align : center;
+    min-height : 100%;
 }
 
 #pageBody {
     background-color : lightgrey;
     display : inline-block;
     width : 900px;
+}
+
+#pageHeader {
+    
+}
+
+#pageMenuBar {
+    
+}
+
+#pageContent {
+    min-height : 1000px;
 }
 
 div.dropDownContainer {
