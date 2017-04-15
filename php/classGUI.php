@@ -56,7 +56,7 @@ class GUI_Show extends GUI_Media {
 class GUI_ShowBig extends GUI_Show {
 	
 	public function __construct($data) {
-		$this->html = file_get_contents("template/show-content.html");
+		$this->html = file_get_contents("template/showContent.html");
 		parent::__construct($data);
 	}
 	
@@ -82,7 +82,7 @@ class GUI_ShowBig extends GUI_Show {
 class GUI_ShowSmall extends GUI_Show {
 	
 	public function __construct($data) {
-		$this->html = file_get_contents("template/show-small.html");
+		$this->html = file_get_contents("template/showListItem.html");
 		parent::__construct($data);
 	}
 	
@@ -108,7 +108,7 @@ class GUI_Episode extends GUI_Media {
 class GUI_EpisodeBig extends GUI_Episode {
 	
 	public function __construct($data) {
-		$this->html = file_get_contents("template/episode-big.html");
+		$this->html = file_get_contents("template/episodeContent.html");
 		parent::__construct($data);
 	}
 	
@@ -122,7 +122,7 @@ class GUI_EpisodeBig extends GUI_Episode {
 class GUI_EpisodeSmall extends GUI_Episode {
 	
 	public function __construct($data) {
-		$this->html = file_get_contents("template/episode-small.html");
+		$this->html = file_get_contents("template/episodeListItem.html");
 		parent::__construct($data);
 	}
 	
