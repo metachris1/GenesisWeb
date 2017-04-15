@@ -12,7 +12,7 @@
 require_once("php/classMain.php");
 
 $pageTitle = "Index";
-$pageLink = "<link rel='stylesheet' href='style/elements.css'>";
+$pageLink = "";
 $pageMeta = "";
 
 $pageHead = getHeadHTML($pageTitle, $pageLink, $pageMeta);

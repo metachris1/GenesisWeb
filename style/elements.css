@@ -1,3 +1,7 @@
+
+
+/* BUTTON */
+
 a.button {
     background-color : #AAA;
 	background-image : -webkit-linear-gradient(#AAA 0%, #888 90%); /* For Safari 5.1 to 6.0 */
@@ -8,12 +12,21 @@ a.button {
     border-radius : 4px;
 	color : black;
 	text-decoration : none;
-	padding : 6px;
-	line-height : 20px;
+	padding-left : 6px;
+	padding-right : 6px;
+	display : inline-block;
+	transition : background-color 0s;
+	line-height : 38px;
+	height : 38px;
 }
 
 a.button:hover {
     border : solid 1px #555;
+}
+
+a.button:active {
+    background-color : #888;
+	background-image : none;
 }
 
 a.button.blue {
@@ -28,6 +41,11 @@ a.button.blue:hover {
     border : solid 1px #026;
 }
 
+a.button.blue:active {
+    background-color : #059;
+	background-image : none;
+}
+
 
 a.button.red {
     background-color : #C44;
@@ -39,6 +57,95 @@ a.button.red {
 
 a.button.red:hover {
     border : solid 1px #700;
+}
+
+a.button.red:active {
+    background-color : #A11;
+	background-image : none;
+}
+
+
+/* EPISODE AS LIST ITEM */
+
+div.episodeListItem {
+	width : 500px;
+	height : 100px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.episodeListItem:hover {
+	background-color : yellow;
+}
+
+div.episodeListItem img {
+	width : 100px;
+	height : 100px;
+	display : inline-block;
+	float : left;
+}
+
+div.episodeListItem div {
+	width : 400px;
+	height : 200px;
+	display : inline-block;
+	float : right;
+}
+
+/* EPISODE AS CONTENT */
+
+div.episodeContent {
+	width : 850px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.episodeContent video {
+	width : 850px;
+	height : 480px;
+	display : inline-block;
+}
+
+div.episodeContent div {
+
+}
+
+/* SHOW AS LIST ITEM */
+
+div.showListItem {
+	width : 600px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.showListItem:hover {
+	background-color : yellow;
+}
+
+div.showListItem img {
+	width : 600px;
+	height : 380px;
+	display : inline-block;
+}
+
+div.showListItem div {
+}
+
+/* SHOW AS CONTENT */
+
+div.showContent {
+	width : 850px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.showContent video {
+	width : 850px;
+	height : 480px;
+	display : inline-block;
+}
+
+div.showContent div {
 }
 
 
