@@ -19,11 +19,11 @@ class GUI {
 		$this->buildHTML();
 	}
 	
-	public function getHTML() {
-		return $this->html;
+	public function buildHTML() {
 	}
 	
-	public function buildHTML() {
+	public function getHTML() {
+		return $this->html;
 	}
 }
 
@@ -47,16 +47,16 @@ class GUI_Show extends GUI {
 class GUI_ShowBig extends GUI_Show {
 	
 	public function __construct($data) {
-		parent::__construct($data);
 		$this->html = file_get_contents("template/show-big.html");
+		parent::__construct($data);
 	}
 }
 
 class GUI_ShowSmall extends GUI_Show {
 	
 	public function __construct($data) {
-		parent::__construct($data);
 		$this->html = file_get_contents("template/show-small.html");
+		parent::__construct($data);
 	}
 }
 
@@ -82,16 +82,16 @@ class GUI_Episode extends GUI {
 class GUI_EpisodeBig extends GUI_Episode {
 	
 	public function __construct($data) {
-		parent::__construct($data);
 		$this->html = file_get_contents("template/episode-big.html");
+		parent::__construct($data);
 	}
 }
 
 class GUI_EpisodeSmall extends GUI_Episode {
 	
 	public function __construct($data) {
-		parent::__construct($data);
 		$this->html = file_get_contents("template/episode-small.html");
+		parent::__construct($data);
 	}
 }
 

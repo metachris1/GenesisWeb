@@ -30,7 +30,7 @@ class Show extends Media {
 }
 
 class Episode extends Media {
-	
+	public $video;
 	
 	
 }
