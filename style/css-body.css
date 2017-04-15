@@ -13,7 +13,7 @@ body {
 }
 
 #pageBody {
-    background-color : lightgrey;
+    background-color : white;
     display : inline-block;
     width : 900px;
 }
@@ -34,21 +34,11 @@ div.dropDownContainer {
     position : relative;
     height : 40px;
     width : 200px;
-    background-color : lightgreen;
     display : inline-block;
-}
-
-div.dropDownContainer div {
-    position : absolute;
-    width : 200px;
-    height : 40px;
-    line-height : 40px;
-    background-color : lightgreen;
 }
 
 div.dropDownContainer ul {
     overflow-y : visible;
-    top : 40px;
     position : absolute;
     height : 0px;
     width : 200px;
@@ -59,12 +49,28 @@ div.dropDownContainer ul li {
     overflow-y : hidden;
     height : 0px;
     width : 200px;
-    background-color : lightgreen;
+    line-height : 40px;
+    background-color : #0079BF;
+}
+
+div.dropDownContainer a:link {
+   color : black;
+}
+
+div.dropDownContainer a:visited {
+   color : black;
+}
+
+div.dropDownContainer a:hover {
+   color : black;
+}
+
+div.dropDownContainer a:active {
+   color : black;
 }
 
 div.dropDownContainer:hover ul li {
     height : 40px;
-    line-height : 40px;
 }
 
 div.dropDownContainer ul li:hover {
@@ -79,6 +85,8 @@ div.dropDownContainer ul li:hover {
 *.left li, *.left div {
     text-align : left;
     padding-left : 10px;
+    background-color : #0079BF;
+    border-color : black;
 }
 
 *.right {
@@ -154,3 +162,16 @@ div.showContent video {
 
 div.showContent div {
 }
+
+/* navbar */
+
+.navbar-default {
+	background-color : #0079BF;
+	border-color : black;
+}
+
+.navbar-nav {
+	background-color : #0079BF;
+}
+
+
