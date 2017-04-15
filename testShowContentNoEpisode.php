@@ -15,13 +15,6 @@ $dataShow = new Show();
 $dataShow->title = "Hello show";
 $dataShow->description = "The best show you'll ever see!";
 $dataShow->image = "resources/tempShowImage.jpg";
-for($i = 1; $i <= 5; $i++) {
-	$dataEpisode = new Episode();
-	$dataEpisode->title = "Hello episode ".$i;
-	$dataEpisode->description = "The best episode of the best show you've ever seen!";
-	$dataEpisode->image = "resources/tempShowImage.jpg";
-	array_push($dataShow->episodeList, $dataEpisode);
-}
 $guiShow = new GUI_ShowBig($dataShow);
 
 $pageTitle = "Test show";
