@@ -122,7 +122,6 @@ div.episodeListItem div {
 	height : 200px;
 	display : inline-block;
 	float : right;
-<<<<<<< HEAD
 }
 
 div.episodeContent {
@@ -138,6 +137,5 @@ div.episodeContent video {
 }
 
 div.episodeContent div {
-=======
->>>>>>> e89ea0ce4b59fb0bb4b0c6a07f20a8e386471982
+	
 }
