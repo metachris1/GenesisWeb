@@ -89,7 +89,9 @@ class GUI_ShowSmall extends GUI_Show {
 	public function buildHTML() {
 		parent::buildHTML();
 		$image = $this->data->image;
+		$count = count($this->data->episodeList)." episode(s).";
 		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
+		$this->html = str_replace("[DATA:EPISODE_COUNT]", $count, $this->html);
 	}
 }
 
