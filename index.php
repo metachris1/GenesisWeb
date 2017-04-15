@@ -17,7 +17,7 @@ $pageMeta = "";
 
 $pageHead = getHeadHTML($pageTitle, $pageLink, $pageMeta);
 
-$pageContent = '<a href="testEpisode.php">testEpisode</a>';
+$pageContent = '<a href="testEpisodeListItem.php">testEpisodeListItem</a><br /><a href="testEpisodeContent.php">testEpisodeContent</a>';
 
 $pageBody = getBodyHTML($pageContent);
 
