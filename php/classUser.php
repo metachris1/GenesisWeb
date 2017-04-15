@@ -72,12 +72,12 @@ class User implements \Serializable {
 			return false;
 		
 		$this->userIsConnected = true;
-		$this->userId = $data[0];
-		$this->userName = $data[1];
-		$this->userAvatar = $data[2];
-		$this->userIsPremium = $data[3];
-		$this->userPremiumSince = $data[4];
-		$this->userMemberSince = $data[5];
+		$this->userId = $data["userId"];
+		$this->userName = $data["userName"];
+		$this->userAvatar = $data["userAvatar"];
+		$this->userIsPremium = $data["userIsPremium"];
+		$this->userPremiumSince = $data["userPremiumSince"];
+		$this->userMemberSince = $data["userMemberSince"];
 		return true;
 	}
 	
@@ -90,12 +90,13 @@ class User implements \Serializable {
 		if($data === null)
 			return false;
 		
-		$this->userEmail = $data[0];
-		$this->userId = $data[1];
-		$this->userName = $data[2];
-		$this->userAvatar = $data[3];
-		$this->userIsPremium = $data[4];
-		$this->userPremiumSince = $data[5];
+		$this->userEmail = $data["userEmail"];
+		$this->userId = $data["userId"];
+		$this->userName = $data["userName"];
+		$this->userAvatar = $data["userAvatar"];
+		$this->userIsPremium = $data["userIsPremium"];
+		$this->userPremiumSince = $data["userPremiumSince"];
+		$this->userMemberSince = $data["userMemberSince"];
 		return true;
 	}
 	
