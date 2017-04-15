@@ -137,5 +137,20 @@ div.episodeContent video {
 }
 
 div.episodeContent div {
-	
+
+}
+
+div.showContent {
+	width : 850px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.showContent video {
+	width : 850px;
+	height : 480px;
+	display : inline-block;
+}
+
+div.showContent div {
 }
