@@ -19,11 +19,67 @@ body {
 }
 
 #pageHeader {
-    
+	background-color : #0079BF;
+    border: solid 1px black;
+	border-radius : 4px;
+	height: 40px;
+}
+
+#pageHeader .left {
+	border-top-left-radius : 4px;
+	border-bottom-left-radius : 4px;
+}
+
+#pageHeader .right {
+	border-top-right-radius : 4px;
+	border-bottom-right-radius : 4px;
+}
+
+#pageHeader a:link {
+   color : black;
+}
+
+#pageHeader a:visited {
+   color : black;
+}
+
+#pageHeader a:hover {
+   color : black;
+}
+
+#pageHeader a:active {
+   color : black;
+}
+
+#pageLogo {
+	display : inline-block;
+    float : left;
+	line-height : 38px;
+	font-size : 38px;
+	/*border-radius : 4px;*/
+}
+
+#pageLogo:hover {
+	background-color : lightyellow;
+}
+
+#pageLogo a {
+	height : 38px;
+}
+
+#pageLogo span {
+	height : 38px;
+	float : right;
+}
+
+#pageLogo img {
+	height : 38px;
+	float : left;
 }
 
 #pageMenuBar {
-    
+    display : inline-block;
+    float:right;
 }
 
 #pageContent {
@@ -31,7 +87,7 @@ body {
 }
 
 div.dropDownContainer {
-    position : relative;
+    /*position : relative;*/
     height : 40px;
     width : 200px;
     display : inline-block;
@@ -53,59 +109,19 @@ div.dropDownContainer ul li {
     background-color : #0079BF;
 }
 
-div.dropDownContainer a:link {
-   color : black;
-}
-
-div.dropDownContainer a:visited {
-   color : black;
-}
-
-div.dropDownContainer a:hover {
-   color : black;
-}
-
-div.dropDownContainer a:active {
-   color : black;
-}
-
-div.dropDownContainer:hover ul li {
-    height : 40px;
+li.firstItem {
+    line-height : 38px !important;
+    height : 38px !important;
+    /*border: solid 1px black;
+	border-radius : 4px;*/
 }
 
 div.dropDownContainer ul li:hover {
     background-color : lightyellow;
 }
 
-*.left {
-    float : left;
-    text-align : left;
-}
-
-*.left li, *.left div {
-    text-align : left;
-    padding-left : 10px;
-    background-color : #0079BF;
-    border-color : black;
-}
-
-*.right {
-    float : right;
-    text-align : right;
-}
-
-*.right li, *.right div {
-    text-align : right;
-    padding-right : 10px;
-}
-
-*.center {
-    float : center;
-    text-align : center;
-}
-
-*.center li, *.center div {
-    text-align : center;
+div.dropDownContainer:hover ul li {
+    height : 40px;
 }
 
 
@@ -162,16 +178,4 @@ div.showContent video {
 
 div.showContent div {
 }
-
-/* navbar */
-
-.navbar-default {
-	background-color : #0079BF;
-	border-color : black;
-}
-
-.navbar-nav {
-	background-color : #0079BF;
-}
-
 
