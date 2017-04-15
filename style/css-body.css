@@ -1,6 +1,6 @@
 * {
-    transition : height 0.30s;
-    -webkit-transition : height 0.30s;
+    transition : height 0.30s, background-color 0.30s;
+    -webkit-transition : height 0.30s, background-color 0.30s;
     margin : 0px;
     padding : 0px;
 }
@@ -98,4 +98,28 @@ div.dropDownContainer ul li:hover {
 
 *.center li, *.center div {
     text-align : center;
+}
+
+
+/* style for episode */
+
+div.episodeListItem {
+	width : 500px;
+	height : 100px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.episodeListItem img {
+	width : 100px;
+	height : 100px;
+	display : inline-block;
+	float : left;
+}
+
+div.episodeListItem div {
+	width : 400px;
+	height : 200px;
+	display : inline-block;
+	float : right;
 }
