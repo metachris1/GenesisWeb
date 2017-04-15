@@ -1,0 +1,44 @@
+a.button {
+    background-color : #AAA;
+	background-image : -webkit-linear-gradient(#AAA 0%, #888 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -o-linear-gradient(#AAA 0%, #888 90%); /* For Opera 11.1 to 12.0 */
+    background-image : -moz-linear-gradient(#AAA 0%, #888 90%); /* For Firefox 3.6 to 15 */
+    background-image : linear-gradient(#AAA 0%, #888 90%); /* Standard syntax */
+    border : solid 1px #888;
+    border-radius : 4px;
+	color : black;
+	text-decoration : none;
+	padding : 6px;
+	line-height : 20px;
+}
+
+a.button:hover {
+    border : solid 1px #555;
+}
+
+a.button.blue {
+    background-color : #08C;
+	background-image : -webkit-linear-gradient(#08C 0%, #059 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -o-linear-gradient(#08C 0%, #059 90%); /* For Opera 11.1 to 12.0 */
+    background-image : -moz-linear-gradient(#08C 0%, #059 90%); /* For Firefox 3.6 to 15 */
+    background-image : linear-gradient(#08C 0%, #059 90%); /* Standard syntax */
+}
+
+a.button.blue:hover {
+    border : solid 1px #026;
+}
+
+
+a.button.red {
+    background-color : #C44;
+	background-image : -webkit-linear-gradient(#C44 0%, #A11 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -o-linear-gradient(#C44 0%, #A11 90%); /* For Opera 11.1 to 12.0 */
+    background-image : -moz-linear-gradient(#C44 0%, #A11 90%); /* For Firefox 3.6 to 15 */
+    background-image : linear-gradient(#C44 0%, #A11 90%); /* Standard syntax */
+}
+
+a.button.red:hover {
+    border : solid 1px #700;
+}
+
+
