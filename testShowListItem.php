@@ -22,7 +22,7 @@ for($i = 1; $i <= 5; $i++) {
 	$dataEpisode->image = "resources/tempEpisodeImage.png";
 	array_push($dataShow->episodeList, $dataEpisode);
 }
-$guiShow = new GUI_ShowSmall($dataShow);
+$guiShow = new GUI_ShowListItem($dataShow);
 
 $pageTitle = "Test show";
 $pageLink = "";

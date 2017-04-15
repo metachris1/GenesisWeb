@@ -15,7 +15,7 @@ $dataShow = new Show();
 $dataShow->title = "Hello show";
 $dataShow->description = "The best show you'll ever see!";
 $dataShow->image = "resources/tempShowImage.jpg";
-$guiShow = new GUI_ShowBig($dataShow);
+$guiShow = new GUI_ShowContent($dataShow);
 
 $pageTitle = "Test show";
 $pageLink = "";

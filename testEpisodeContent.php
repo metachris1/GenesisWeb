@@ -16,7 +16,7 @@ $dataEpisode->title = "Hello episode";
 $dataEpisode->description = "The best episode of the best show you've ever seen!";
 $dataEpisode->video = "resources/SWAG.mp4";
 
-$guiEpisode = new GUI_EpisodeBig($dataEpisode);
+$guiEpisode = new GUI_EpisodeContent($dataEpisode);
 
 $pageTitle = "Test episode";
 $pageLink = "";
