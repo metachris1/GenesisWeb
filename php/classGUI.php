@@ -44,7 +44,7 @@ class GUI_Show extends GUI {
 	
 }
 
-class GUI_ShowBig extends GUI_Show() {
+class GUI_ShowBig extends GUI_Show {
 	
 	public function __construct($data) {
 		parent::__construct($data);
@@ -52,7 +52,7 @@ class GUI_ShowBig extends GUI_Show() {
 	}
 }
 
-class GUI_ShowSmall extends GUI_Show() {
+class GUI_ShowSmall extends GUI_Show {
 	
 	public function __construct($data) {
 		parent::__construct($data);
@@ -79,7 +79,7 @@ class GUI_Episode extends GUI {
 	
 }
 
-class GUI_ShowBig extends GUI_Show() {
+class GUI_EpisodeBig extends GUI_Episode {
 	
 	public function __construct($data) {
 		parent::__construct($data);
@@ -87,7 +87,7 @@ class GUI_ShowBig extends GUI_Show() {
 	}
 }
 
-class GUI_ShowSmall extends GUI_Show() {
+class GUI_EpisodeSmall extends GUI_Episode {
 	
 	public function __construct($data) {
 		parent::__construct($data);
