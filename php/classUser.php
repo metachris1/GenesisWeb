@@ -72,13 +72,13 @@ class User implements \Serializable {
 			return false;
 		
 		$this->userIsConnected = true;
-		$this->userId = $data[0];
-		$this->userName = $data[1];
-		$this->userAvatar = $data[2];
-		$this->userIsPremium = $data[3];
-		$this->userPremiumSince = $data[4];
-		$this->userMemberSince = $data[5];
-		return true;
+		$this->userId = $data["userId"];
+		$this->userName = $data["userName"];
+		$this->userAvatar = $data["userAvatar"];
+		$this->userIsPremium = $data["userIsPremium"];
+		$this->userPremiumSince = $data["userPremiumSince"];
+		$this->userMemberSince = $data["userMemberSince"];
+		return $data;
 	}
 	
 	public function getInfo($id) {
@@ -86,17 +86,17 @@ class User implements \Serializable {
 		$bdd = getCurrentBDD();
 		if($bdd === null)
 			throw new Exception("Impossible to reach database. Please retry later.");
-		$data = $bdd->getUserInfo($this->id);
+		$data = $bdd->getUserInfo($this->userId);
 		if($data === null)
 			return false;
 		
-		$this->userEmail = $data[0];
-		$this->userId = $data[1];
-		$this->userName = $data[2];
-		$this->userAvatar = $data[3];
-		$this->userIsPremium = $data[4];
-		$this->userPremiumSince = $data[5];
-		return true;
+		$this->userEmail = $data["userEmail"];
+		$this->userName = $data["userName"];
+		$this->userAvatar = $data["userAvatar"];
+		$this->userIsPremium = $data["userIsPremium"];
+		$this->userPremiumSince = $data["userPremiumSince"];
+		$this->userMemberSince = $data["userMemberSince"];
+		return $data;
 	}
 	
 	public function update($email, $password, $name, $avatar) {
@@ -119,7 +119,7 @@ class User implements \Serializable {
 
 
 function getCurrentUser() {
-	if($_SESSION["currentUser"] === null) {
+	if(!isset($_SESSION["currentUser"]) || $_SESSION["currentUser"] === null) {
 		$_SESSION["currentUser"] = new User();
 	}
 	return $_SESSION["currentUser"];
