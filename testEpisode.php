@@ -18,6 +18,18 @@ $dataEpisode->image = "resources/tempEpisodeImage.png";
 
 $guiEpisode = new GUI_EpisodeSmall($dataEpisode);
 
+$pageTitle = "Test episode";
+$pageLink = "";
+$pageMeta = "";
 
+$pageHead = getHeadHTML($pageTitle, $pageLink, $pageMeta);
+
+$pageContent = $guiEpisode->getHTML();
+
+$pageBody = getBodyHTML($pageContent);
+
+$pageHTML = getPageHTML($pageHead, $pageBody);
+
+echo $pageHTML;
 
 ?>
