@@ -18,17 +18,18 @@ class BDD {
 	public $bddIsConnected = false;
 	
 	public function __construct() {
-		$bddAddr = "mysql:host=localhost;dbname=GenesisWeb";
-		$bddUser = "root";
-		$bddPassword = "";
+		$this->bddAddr = "mysql:host=localhost;dbname=GenesisWeb";
+		$this->bddUser = "root";
+		$this->bddPassword = "warcraft23";
 	}
 	
 	public function connect() {
 		try {
-			$bddPDO = new PDO($bddAddr, $bddUser, $bddPassword);
-			$bddIsConnected = true;
+			$this->bddPDO = new PDO($this->bddAddr, $this->bddUser, $this->bddPassword);
+			$this->bddIsConnected = true;
 		} catch (PDOException $e) {
 			// go to error page
+			echo "IMPOSSIBLE TO CONENCT TO BDD";
 		}
 	}
 	
@@ -88,7 +89,7 @@ class BDD {
 $currentBDD = null;
 
 function getCurrentBDD() {
-	if($currentBDD === null) {
+	if(!isset($currentBDD) || $currentBDD === null) {
 		$currentBDD = new BDD();
 		$currentBDD->connect();
 	}
