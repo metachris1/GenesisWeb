@@ -27,7 +27,7 @@ class GUI {
 	}
 }
 
-class GUI_Show extends GUI {
+class GUI_Media extends GUI {
 	
 	public function __construct($data) {
 		parent::__construct($data);
@@ -36,10 +36,19 @@ class GUI_Show extends GUI {
 	public function buildHTML() {
 		$title = $this->data->title;
 		$description = $this->data->description;
-		$image = $this->data->image;
 		$this->html = str_replace("[DATA:TITLE]", $title, $this->html);
 		$this->html = str_replace("[DATA:DESCRIPTION]", $description, $this->html);
-		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
+	}
+}
+
+class GUI_Show extends GUI_Media {
+	
+	public function __construct($data) {
+		parent::__construct($data);
+	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
 	}
 	
 }
@@ -50,6 +59,24 @@ class GUI_ShowBig extends GUI_Show {
 		$this->html = file_get_contents("template/show-content.html");
 		parent::__construct($data);
 	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$image = $this->data->image;
+		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
+		$episodeList = "";
+		if(count($this->data->episodeList) == 0) {
+			$episodeList = "<span style='font-style:italic;'>No episode for this show yet.</span>";
+		} else {
+			foreach($this->data->episodeList as $episode) {
+				if($episode !== null) {
+					$episodeGui = new GUI_EpisodeSmall($episode);
+					$episodeList = $episodeList.$episodeGui->getHTML();
+				}
+			}
+		}
+		$this->html = str_replace("[DATA:EPISODE_LIST]", $episodeList, $this->html);
+	}
 }
 
 class GUI_ShowSmall extends GUI_Show {
@@ -58,23 +85,22 @@ class GUI_ShowSmall extends GUI_Show {
 		$this->html = file_get_contents("template/show-small.html");
 		parent::__construct($data);
 	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$image = $this->data->image;
+		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
+	}
 }
 
-class GUI_Episode extends GUI {
+class GUI_Episode extends GUI_Media {
 	
 	public function __construct($data) {
 		parent::__construct($data);
 	}
 	
 	public function buildHTML() {
-		$title = $this->data->title;
-		$description = $this->data->description;
-		$image = $this->data->image;
-		$video = $this->data->video;
-		$this->html = str_replace("[DATA:TITLE]", $title, $this->html);
-		$this->html = str_replace("[DATA:DESCRIPTION]", $description, $this->html);
-		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
-		$this->html = str_replace("[DATA:VIDEO]", $video, $this->html);
+		parent::buildHTML();
 	}
 	
 }
@@ -85,6 +111,12 @@ class GUI_EpisodeBig extends GUI_Episode {
 		$this->html = file_get_contents("template/episode-big.html");
 		parent::__construct($data);
 	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$video = $this->data->video;
+		$this->html = str_replace("[DATA:VIDEO]", $video, $this->html);
+	}
 }
 
 class GUI_EpisodeSmall extends GUI_Episode {
@@ -92,6 +124,12 @@ class GUI_EpisodeSmall extends GUI_Episode {
 	public function __construct($data) {
 		$this->html = file_get_contents("template/episode-small.html");
 		parent::__construct($data);
+	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$image = $this->data->image;
+		$this->html = str_replace("[DATA:IMAGE]", $image, $this->html);
 	}
 }
 

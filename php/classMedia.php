@@ -15,27 +15,29 @@ TABLE media (
 
 
 class Media {
-	public $title;
-	public $description;
-	public $image;
-	public $publicationDate;
+	public $title = "default title";
+	public $description = "default description";
+	public $publicationDate = "default date";
 	
 	
 }
 
 class Show extends Media {
-	
+	public $image = "NAN";
+	public $episodeList = [];
 	
 	
 }
 
 class Episode extends Media {
-	public $video;
+	public $image = "NAN";
+	public $video = "NAN";
 	
 	
 }
 
 class Game extends Media {
+	public $image = "NAN";
 	
 	
 	
