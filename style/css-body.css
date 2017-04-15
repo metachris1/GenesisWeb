@@ -123,3 +123,18 @@ div.episodeListItem div {
 	display : inline-block;
 	float : right;
 }
+
+div.episodeContent {
+	width : 850px;
+	display : inline-block;
+	background-color : orange;
+}
+
+div.episodeContent video {
+	width : 850px;
+	height : 480px;
+	display : inline-block;
+}
+
+div.episodeContent div {
+}
