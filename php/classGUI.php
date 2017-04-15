@@ -47,7 +47,7 @@ class GUI_Show extends GUI {
 class GUI_ShowBig extends GUI_Show {
 	
 	public function __construct($data) {
-		$this->html = file_get_contents("template/show-big.html");
+		$this->html = file_get_contents("template/show-content.html");
 		parent::__construct($data);
 	}
 }
