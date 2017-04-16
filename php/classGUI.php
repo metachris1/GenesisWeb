@@ -135,4 +135,47 @@ class GUI_EpisodeListItem extends GUI_Episode {
 	}
 }
 
+class GUI_Comment extends GUI {
+	
+	public function __construct($data) {
+		$this->html = file_get_contents("template/comment.html");
+		parent::__construct($data);
+	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$commentId = $this->data->commentId;
+		$userName = $this->data->userName;
+		$userAvatar = $this->data->userAvatar;
+		$commentText = $this->data->commentText;
+		$commentPublicationDate = $this->data->commentPublicationDate;
+		$this->html = str_replace("[DATA:COMMENT_ID]", $commentId, $this->html);
+		$this->html = str_replace("[DATA:USER_NAME]", $userName, $this->html);
+		$this->html = str_replace("[DATA:USER_AVATAR]", $userAvatar, $this->html);
+		$this->html = str_replace("[DATA:COMMENT_TEXT]", $commentText, $this->html);
+		$this->html = str_replace("[DATA:COMMENT_PUBLICATION_DATE]", $commentPublicationDate, $this->html);
+		foreach($this->data->children as $comment) {
+			$gui = new GUI_Comment($comment);
+			$this->html = $this->html.$gui->getHTML();
+		}
+	}
+}
+
+class GUI_CommentList extends GUI {
+	
+	public function __construct($data) {
+		$this->html = file_get_contents("template/comment.html");
+		parent::__construct($data);
+	}
+	
+	public function buildHTML() {
+		parent::buildHTML();
+		$this->html = "";
+		foreach($this->data as $comment) {
+			$gui = new GUI_Comment($comment);
+			$this->html = $this->html.$gui->getHTML();
+		}
+	}
+}
+
 ?>

@@ -22,7 +22,8 @@ $pageContent = '<a href="testEpisodeListItem.php">testEpisodeListItem</a>'
 	.'<br /><a href="testShowContent.php">testShowContent</a>'
 	.'<br /><a href="testShowContentNoEpisode.php">testShowContentNoEpisode</a>'
 	.'<br /><a href="testShowListItem.php">testShowListItem</a>'
-	.'<br /><a href="testUserProfil.php">testUserProfil</a>';
+	.'<br /><a href="testUserProfil.php">testUserProfil</a>'
+	.'<br /><a href="testCommentList.php">testCommentList</a>';
 
 $pageBody = getBodyHTML($pageContent);
 

@@ -4,6 +4,7 @@
 	require_once("classBDD.php");
 	require_once("classUser.php");
 	require_once("classMedia.php");
+	require_once("classComment.php");
 	require_once("classGUI.php");
 	
 	
