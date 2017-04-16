@@ -33,6 +33,8 @@ class BDD {
 		}
 	}
 	
+	/* USER */
+	
 	public function createUser($email, $password, $name) {
 		$request = $this->bddPDO->prepare("INSERT INTO user"
 			." (userEmail, userPassword, userName)"
@@ -57,7 +59,7 @@ class BDD {
 		return $result;
 	}
 	
-	public function getUserInfo($id) {
+	public function getUserDataFromId($id) {
 		$request = $this->bddPDO->prepare("SELECT *"
 			." FROM user"
 			." WHERE userId = :id;");
@@ -66,7 +68,7 @@ class BDD {
 		return $result;
 	}
 	
-	public function updateUserInfo($id, $email, $password, $name, $avatar) {
+	public function updateUserData($id, $email, $password, $name, $avatar) {
 		$request = $this->bddPDO->prepare("UPDATE user"
 			." SET userEmail = :email,"
 				." userPassword = :password,"
@@ -79,6 +81,97 @@ class BDD {
 			":password" => $password,
 			":name" => $name,
 			":avatar" => $avatar));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	public function getUserList($limit, $offset, $order, $dir) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM user"
+			." LIMIT = :id OFFSET;"
+			." ORDER BY :order :dir;");
+		$request->execute(array(":limit" => $limit,":offset" => $offset,":order" => $order,":dir" => $dir));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	/* SHOW */
+	
+	public function getShowData($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM show"
+			." WHERE showId = :id;");
+		$request->execute(array(":id" => $id));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	public function getShowList() {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM show;");
+		$request->execute(array());
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	/* EPISODE */
+	
+	public function getEpisodeData($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM episode"
+			." WHERE episodeId = :id;");
+		$request->execute(array(":id" => $id));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	public function getEpisodeList($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM episode"
+			." WHERE episodeShowId = :id");
+		$request->execute(array(":id" => $id));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	/* GAME */
+	
+	public function getGameList() {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM game;");
+		$request->execute();
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	/* COMMENTS */
+	
+	public function getShowComments($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM comments"
+			." WHERE commentsMediaId = :id"
+			." AND commentsMediaType = 1;");
+		$request->execute(array(":id" => $id));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	public function getEpisodeComments($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM comments"
+			." WHERE commentsMediaId = :id"
+			." AND commentsMediaType = 2;");
+		$request->execute(array(":id" => $id));
+		$result = $request->fetch(PDO::FETCH_ASSOC);
+		return $result;
+	}
+	
+	public function getGameComments($id) {
+		$request = $this->bddPDO->prepare("SELECT *"
+			." FROM comments"
+			." WHERE commentsMediaId = :id"
+			." AND commentsMediaType = 3;");
+		$request->execute(array(":id" => $id));
 		$result = $request->fetch(PDO::FETCH_ASSOC);
 		return $result;
 	}

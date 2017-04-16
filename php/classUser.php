@@ -81,12 +81,12 @@ class User implements \Serializable {
 		return $data;
 	}
 	
-	public function getInfo($id) {
+	public function getData($id) {
 		$this->userId = $id;
 		$bdd = getCurrentBDD();
 		if($bdd === null)
 			throw new Exception("Impossible to reach database. Please retry later.");
-		$data = $bdd->getUserInfo($this->userId);
+		$data = $bdd->getUserDataFromId($this->userId);
 		if($data === null)
 			return false;
 		

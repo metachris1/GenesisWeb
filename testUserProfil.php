@@ -22,7 +22,7 @@ $user = new User();
 $pageContent = "<div style='display: inline-block; text-align: justify;'>"
 	.arrayToString($user->connect("zeratul_du_38@hotmail.fr", "5tr0ngP455w0rd"))
 	."<br/>"
-	.arrayToString($user->getInfo(1))
+	.arrayToString($user->getData(1))
 	."</div>";
 
 $pageBody = getBodyHTML($pageContent);
