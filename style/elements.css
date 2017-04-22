@@ -4,20 +4,20 @@
 
 a.button {
     background-color : #AAA;
-	background-image : -webkit-linear-gradient(#AAA 0%, #888 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -webkit-linear-gradient(#AAA 0%, #888 90%); /* For Safari 5.1 to 6.0 */
     background-image : -o-linear-gradient(#AAA 0%, #888 90%); /* For Opera 11.1 to 12.0 */
     background-image : -moz-linear-gradient(#AAA 0%, #888 90%); /* For Firefox 3.6 to 15 */
     background-image : linear-gradient(#AAA 0%, #888 90%); /* Standard syntax */
     border : solid 1px #888;
     border-radius : 4px;
-	color : black;
-	text-decoration : none;
-	padding-left : 6px;
-	padding-right : 6px;
-	display : inline-block;
-	transition : background-color 0s;
-	line-height : 38px;
-	height : 38px;
+    color : black;
+    text-decoration : none;
+    padding-left : 6px;
+    padding-right : 6px;
+    display : inline-block;
+    transition : background-color 0s;
+    line-height : 38px;
+    height : 38px;
 }
 
 a.button:hover {
@@ -26,12 +26,12 @@ a.button:hover {
 
 a.button:active {
     background-color : #888;
-	background-image : none;
+    background-image : none;
 }
 
 a.button.blue {
     background-color : #08C;
-	background-image : -webkit-linear-gradient(#08C 0%, #059 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -webkit-linear-gradient(#08C 0%, #059 90%); /* For Safari 5.1 to 6.0 */
     background-image : -o-linear-gradient(#08C 0%, #059 90%); /* For Opera 11.1 to 12.0 */
     background-image : -moz-linear-gradient(#08C 0%, #059 90%); /* For Firefox 3.6 to 15 */
     background-image : linear-gradient(#08C 0%, #059 90%); /* Standard syntax */
@@ -43,13 +43,13 @@ a.button.blue:hover {
 
 a.button.blue:active {
     background-color : #059;
-	background-image : none;
+    background-image : none;
 }
 
 
 a.button.red {
     background-color : #C44;
-	background-image : -webkit-linear-gradient(#C44 0%, #A11 90%); /* For Safari 5.1 to 6.0 */
+    background-image : -webkit-linear-gradient(#C44 0%, #A11 90%); /* For Safari 5.1 to 6.0 */
     background-image : -o-linear-gradient(#C44 0%, #A11 90%); /* For Opera 11.1 to 12.0 */
     background-image : -moz-linear-gradient(#C44 0%, #A11 90%); /* For Firefox 3.6 to 15 */
     background-image : linear-gradient(#C44 0%, #A11 90%); /* Standard syntax */
@@ -61,49 +61,49 @@ a.button.red:hover {
 
 a.button.red:active {
     background-color : #A11;
-	background-image : none;
+    background-image : none;
 }
 
 
 /* EPISODE AS LIST ITEM */
 
 div.episodeListItem {
-	width : 500px;
-	height : 100px;
-	display : inline-block;
-	background-color : orange;
+    width : 500px;
+    height : 100px;
+    display : inline-block;
+    background-color : orange;
 }
 
 div.episodeListItem:hover {
-	background-color : yellow;
+    background-color : yellow;
 }
 
 div.episodeListItem img {
-	width : 100px;
-	height : 100px;
-	display : inline-block;
-	float : left;
+    width : 100px;
+    height : 100px;
+    display : inline-block;
+    float : left;
 }
 
 div.episodeListItem div {
-	width : 400px;
-	height : 200px;
-	display : inline-block;
-	float : right;
+    width : 400px;
+    height : 200px;
+    display : inline-block;
+    float : right;
 }
 
 /* EPISODE AS CONTENT */
 
 div.episodeContent {
-	width : 850px;
-	display : inline-block;
-	background-color : orange;
+    width : 850px;
+    display : inline-block;
+    background-color : orange;
 }
 
 div.episodeContent video {
-	width : 850px;
-	height : 480px;
-	display : inline-block;
+    width : 850px;
+    height : 480px;
+    display : inline-block;
 }
 
 div.episodeContent div {
@@ -113,19 +113,19 @@ div.episodeContent div {
 /* SHOW AS LIST ITEM */
 
 div.showListItem {
-	width : 600px;
-	display : inline-block;
-	background-color : orange;
+    width : 600px;
+    display : inline-block;
+    background-color : orange;
 }
 
 div.showListItem:hover {
-	background-color : yellow;
+    background-color : yellow;
 }
 
 div.showListItem img {
-	width : 600px;
-	height : 380px;
-	display : inline-block;
+    width : 600px;
+    height : 380px;
+    display : inline-block;
 }
 
 div.showListItem div {
@@ -134,18 +134,84 @@ div.showListItem div {
 /* SHOW AS CONTENT */
 
 div.showContent {
-	width : 850px;
-	display : inline-block;
-	background-color : orange;
+    width : 850px;
+    display : inline-block;
+    background-color : orange;
 }
 
 div.showContent video {
-	width : 850px;
-	height : 480px;
-	display : inline-block;
+    width : 850px;
+    height : 480px;
+    display : inline-block;
 }
 
 div.showContent div {
 }
 
+/* COMMENT AS LIST ITEM */
 
+div.commentListItem {
+    width : 100%;
+    margin-top : 5px;
+    display : inline-block;
+    /*border-top : solid 1px #555;*/
+}
+
+div.commentContent {
+    width : 80%;
+    width: calc(100% - 50px);
+    margin-top : 5px;
+    padding-left : 5px;
+    display : inline-block;
+    float : left;
+    /*border-left : solid 1px #555;
+    border-right : solid 1px #555;*/
+    text-align : justify;
+}
+
+div.commentUser {
+    width : 50px;
+    height : 50px;
+    padding : 5px;
+    display : inline-block;
+    float : left;
+}
+
+div.commentUser img{
+    width : 40px;
+    height : 40px;
+}
+
+a.userName {
+
+}
+
+a.userName.left {
+    float : left;
+}
+a.userName.right {
+    float : right;
+}
+
+/* COMMENT LIST WRAPPER */
+
+div.commentListWrapper {
+    width : 800px;
+    display : inline-block;
+}
+
+/* OTHER */
+
+.date {
+    font-style : italic;
+}
+
+.date.left {
+    float : left;
+    padding-right : 10px;
+}
+
+.date.right {
+    float : right;
+    padding-left : 10px;
+}

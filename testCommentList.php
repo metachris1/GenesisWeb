@@ -7,22 +7,22 @@
 
 
 
-*/
+ */
 
 require_once("php/classMain.php");
 
 $commentData = [];
-for($i = 1; $i <= 10; $i++) {
-	$commentArrayElement = [];
-	$commentArrayElement["commentId"] = $i;
-	$commentArrayElement["commentMediaType"] = 1;
-	$commentArrayElement["commentUserId"] = 1;
-	$commentArrayElement["userName"] = "Daratrix";
-	$commentArrayElement["userAvatar"] = "resources/DOGE.jpeg";
-	$commentArrayElement["commentText"] = 0;
-	$commentArrayElement["commentParentId"] = 0;
-	$commentArrayElement["commentPublicationDate"] = 0;
-	array_push($commentData, $commentArrayElement);
+for ($i = 1; $i <= 100; $i++) {
+    $commentArrayElement = [];
+    $commentArrayElement["commentId"] = $i;
+    $commentArrayElement["commentMediaType"] = 1;
+    $commentArrayElement["userId"] = 1;
+    $commentArrayElement["userName"] = "Daratrix";
+    $commentArrayElement["userAvatar"] = "resources/DOGE.jpeg";
+    $commentArrayElement["commentText"] = "I'm a random comment. But I'm not randomly generated. Akala miam miam! For Aïur! Lok'tar oghar!";
+    $commentArrayElement["commentParentId"] = rand(0, $i) % $i;
+    $commentArrayElement["commentPublicationDate"] = "2017-16-04";
+    array_push($commentData, $commentArrayElement);
 }
 
 $commentArray = commentDataToArray($commentData);
@@ -36,12 +36,11 @@ $pageMeta = "";
 
 $pageHead = getHeadHTML($pageTitle, $pageLink, $pageMeta);
 
-$pageContent = $guiShow->getHTML();
+$pageContent = $guiCommentList->getHTML();
 
 $pageBody = getBodyHTML($pageContent);
 
 $pageHTML = getPageHTML($pageHead, $pageBody);
 
 echo $pageHTML;
-
 ?>
